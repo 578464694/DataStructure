@@ -5,14 +5,11 @@ function find($arr,$number)
 	$len = count($arr);
 	$left = 0;
 	$right = $len-1;
-	$mid = (int)(($left+$right)/2);
+	
 	while($left <= $right) 
 	{
-		if($arr[$left] == $number) {
-			return $left;
-		}elseif($arr[$right] == $number) {
-			return $right;
-		}elseif($arr[$mid] == $number) {
+		$mid = (int)(($left+$right)/2);
+		if($arr[$mid] == $number) {
 			return $mid;
 		}
 		if($arr[$mid] < $number) {
